@@ -1,0 +1,36 @@
+@charset 'utf-8';
+
+.latest-wrap {
+  overflow: scroll;
+  margin: 0.1rem -0.1rem;
+}
+
+.latest-movie {
+  width: 2.2rem * 4 + 0.1rem * 4;
+  font-size: 0;
+
+  > figure {
+    @include size(2.2rem);
+
+    position: relative;
+    background-color: #eee;
+    display: inline-block;
+    margin: 0;
+    margin-left: 0.1rem;
+    font-size: 0.14rem;
+    overflow: hidden;
+
+    > img {
+      width: 100%;
+    }
+
+    > figcaption {
+      @include absolute(bottom 0 left 0 right 0);
+
+      line-height: .4rem;
+      text-align: center;
+      background-color: rgba(0,0,0,0.6);
+      color: white;
+    }
+  }
+}
