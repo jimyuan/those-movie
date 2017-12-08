@@ -18,7 +18,7 @@
 
   .poster {
     @include size($post-width, $post-width * 3 / 2);
-    background-color: #ccc;
+    background: #ccc no-repeat 0 0 / cover;
     margin-right: 0.16rem;
   }
 
