@@ -2,12 +2,12 @@ import Vue from 'vue'
 import {
   // install,
   // version,
-  Header
-  // Button,
-  // Cell,
+  Header,
+  Button,
+  Cell,
   // CellSwipe,
   // Field,
-  // Badge,
+  Badge
   // Switch,
   // Spinner,
   // TabItem,
@@ -38,3 +38,6 @@ import {
 } from 'mint-ui'
 
 Vue.component(Header.name, Header)
+Vue.component(Button.name, Button)
+Vue.component(Cell.name, Cell)
+Vue.component(Badge.name, Badge)

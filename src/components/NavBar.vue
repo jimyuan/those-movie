@@ -1,18 +1,23 @@
 <template>
   <header class="nav-bar">
-    <mt-header fixed title="旧电影"></mt-header>
+    <mt-header fixed :title="$store.state.pageTitle" :class="{'desc-class': descClass}">
+      <mt-button icon="back" slot="left" @click.native="$router.go(-1)" v-if="needBack"></mt-button>
+    </mt-header>
   </header>
 </template>
 <script>
 export default {
   data () {
     return {
-      activeIndex: ''
+      needBack: false,
+      descClass: false
     }
   },
   watch: {
     '$route' () {
-      this.activeIndex = this.$route.path
+      const path = this.$route.path
+      this.needBack = path !== '/home'
+      this.descClass = path.indexOf('/desc') > -1
     }
   }
 }

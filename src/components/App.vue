@@ -30,13 +30,13 @@ export default {
         Indicator.open({ text: '载入数据...' })
         // 2
         axios.get('/static/movie.json')
+          // 3
           .then(data => {
-            this.$store.commit('fetchData', data.data)
-            // 3
+            this.$store.commit('fetchData', data.data.reverse())
             Indicator.close()
           })
+          // 4
           .catch(err => {
-            // 4
             Indicator.close()
             console.log(err)
           })

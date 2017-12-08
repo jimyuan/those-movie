@@ -9,7 +9,7 @@
 // $spacer: 20px;
 // $table-inverse-bg: invert($white);
 // $font-family-monospace: monospace;
-
+$monospace: 'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
 $z-layers:(
   'userbar': 20,
   'navbar': 20,

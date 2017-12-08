@@ -1,0 +1,43 @@
+@charset 'utf-8';
+
+.movie-list {
+  $post-width: 0.35rem;
+
+  margin: 0;
+  padding: 0;
+
+  > li {
+    display: flex;
+    margin: 0.1rem 0;
+    padding: 0.1rem 0;
+
+    &:not(:last-child) {
+      background: linear-gradient(180deg, #d9d9d9, #d9d9d9 50%, transparent 50%) no-repeat bottom left / 120% 1px;
+    }
+  }
+
+  .poster {
+    @include size($post-width, $post-width * 3 / 2);
+    background-color: #ccc;
+    margin-right: 0.16rem;
+  }
+
+  .desc {
+    font-size: 0.14rem;
+    line-height: 0.25rem;
+    width: calc(100% - 0.35rem - 0.16rem);
+
+    > span:last-child {
+      @include overflow-text;
+
+      display: block;
+    }
+
+    .mint-badge {
+      line-height: 1.2;
+      border-radius: 0.4em;
+      margin-left: 0.1rem;
+      font-family: $monospace;
+    }
+  }
+}

@@ -2,15 +2,18 @@
 
 .latest-wrap {
   overflow: scroll;
-  margin: 0.1rem -0.1rem;
+  margin: 0 -0.1rem 0.1rem;
 }
 
 .latest-movie {
-  width: 2.2rem * 4 + 0.1rem * 4;
+  $w: 1.6rem;
+
+  width: $w * 4 + 0.1rem * 4;
   font-size: 0;
+  padding-bottom: 15px;
 
   > figure {
-    @include size(2.2rem);
+    @include size($w);
 
     position: relative;
     background-color: #eee;
@@ -19,6 +22,7 @@
     margin-left: 0.1rem;
     font-size: 0.14rem;
     overflow: hidden;
+    box-shadow: 0 2px 8px #ccc;
 
     > img {
       width: 100%;
@@ -33,4 +37,29 @@
       color: white;
     }
   }
+}
+
+.section-title {
+  &.mint-cell {
+    background-image: none;
+  }
+
+  .mint-cell-wrapper {
+    padding: 0;
+    background-image: none;
+  }
+
+  .mint-cell-allow-right::after {
+    right: 1px;
+  }
+
+  .mint-cell-value {
+    margin-right: 0.2rem;
+  }
+}
+
+.movie-sort {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.1rem;
 }
