@@ -5,7 +5,7 @@
         v-for="movie of moviesBySort"
         :key="movie.id"
         @click="$router.push(`/desc/${movie.id}`)">
-        <div class="poster" :style="`background-image: url(/static/poster/${movie.poster || 'default.jpg'})`"></div>
+        <div class="poster" :style="`background-image: url(./static/poster/${movie.poster || 'default.jpg'})`"></div>
         <div class="desc">
           <span>
             {{ movie.name }}

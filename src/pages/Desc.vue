@@ -1,6 +1,6 @@
 <template>
   <section class="movie-desc" v-if="movie">
-    <div class="post-area" :style="`background-image: url(/static/poster/${movie.poster || 'default.jpg'})`"></div>
+    <div class="post-area" :style="`background-image: url(./static/poster/${movie.poster || 'default.jpg'})`"></div>
     <section>
       <h2>{{ movie.name }}</h2>
       <div class="sub-content gray12">

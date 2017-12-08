@@ -9,7 +9,7 @@
     <section class="latest-wrap">
       <div class="latest-movie">
         <figure v-for="movie of latest4" :key="movie.id" @click="$router.push(`/desc/${movie.id}`)">
-          <img :src="`/static/poster/${movie.poster || 'default.jpg'}`">
+          <img :src="`./static/poster/${movie.poster || 'default.jpg'}`">
           <figcaption v-text="movie.name"></figcaption>
         </figure>
       </div>
