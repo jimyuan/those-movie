@@ -29,7 +29,7 @@ export default {
         // 1
         Indicator.open({ text: '载入数据...' })
         // 2
-        axios.get('/static/movie.json')
+        axios.get('./static/movie.json')
           // 3
           .then(data => {
             this.$store.commit('fetchData', data.data.reverse())
