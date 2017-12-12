@@ -7,7 +7,7 @@ import {
   Cell,
   // CellSwipe,
   // Field,
-  Badge
+  Badge,
   // Switch,
   // Spinner,
   // TabItem,
@@ -29,7 +29,7 @@ import {
   // Toast,
   // Indicator
   // MessageBox,
-  // InfiniteScroll,
+  InfiniteScroll
   // Lazyload,
   // DatetimePicker,
   // IndexList,
@@ -41,3 +41,4 @@ Vue.component(Header.name, Header)
 Vue.component(Button.name, Button)
 Vue.component(Cell.name, Cell)
 Vue.component(Badge.name, Badge)
+Vue.use(InfiniteScroll)

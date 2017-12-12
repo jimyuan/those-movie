@@ -2,7 +2,6 @@ import Vue from 'vue'
 import App from 'COMPONENTS/App'
 import router from 'ROUTERS/'
 import store from 'STORE/store'
-import './filters/'
 import './public/MintComponents'
 Vue.config.productionTip = false
 
